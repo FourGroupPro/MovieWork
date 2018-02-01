@@ -79,7 +79,10 @@
 			<img src="images/강철비.jpg">
 			<input type="submit" name="kind" value="4">
 			</td>
-			<td><a href="Usertemplate.jsp?page=index.html"><img src="images/어쌔신더비기닝.jpg"></a></td>
+			<td>
+			<img src="images/어쌔신더비기닝.jpg">
+			<input type="submit" name="kind" value="4">
+			</td>
 			<td><a href="Usertemplate.jsp?page=index.html"><img src="images/위대한 쇼맨.jpg"></a></td>
 		</tr>
 	</table>
