@@ -1,5 +1,9 @@
+<%@page import="kr.ac.daegu.MovieDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%ArrayList<MovieDTO> movieList = (ArrayList)request.getAttribute("movieList");
+    MovieDTO mdto = new MovieDTO();%>
 <!DOCTYPE html>
 <html>
 <head>

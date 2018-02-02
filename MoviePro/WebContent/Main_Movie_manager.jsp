@@ -21,7 +21,7 @@
 }
 
 #regist input[type=submit] {
-   width: 100%;
+   width: 50%;
    background-color: #86858f /* #4CAF50 */;
    color: white;
    padding: 14px 20px;
@@ -131,8 +131,8 @@ div#regist2{
                   </td>
                   <td>
                      <div id="regist">
-                        <form action="SM_MovieRegist.mo" method="post">
-                           <input type="hidden" name="no" value="0">
+                        <form action="movieUpdate.mo" method="post">
+                           <input type="hidden" name="no" value="<%=mdto.getNo()%>">
                            <table style="width: 400px;">
                               <tr>
                                  <td>
@@ -185,10 +185,11 @@ div#regist2{
                                  </select></td>
                               </tr>
                               <tr>
-                                 <td><input type="submit" value="Submit"></td>
+                                 <td><input type="submit" value="Update"></td>
                               </tr>
 
                            </table>
+                           <a href="movieDelete.mo?no=<%=mdto.getNo()%>">delete</a>
                         </form>
                      </div>
                   </td>

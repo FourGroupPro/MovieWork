@@ -32,7 +32,7 @@ public class ManagerFrontControllServlet extends HttpServlet {
    String requestURI = request.getRequestURI();
    String contextPath = request.getContextPath();
    String command = requestURI.substring(contextPath.length());
-   if (command.equals("/Register.manager")) {//µî·Ï
+   if (command.equals("/Register.manager")) {//ï¿½ï¿½ï¿½
       String id = request.getParameter("id");
       String pw = request.getParameter("pw");
       String pwsh = request.getParameter("pwsh");
@@ -46,40 +46,40 @@ public class ManagerFrontControllServlet extends HttpServlet {
       mdto.setPart(part);
       mdto.setName(name);
       mdao.managerRegister(mdto);
-      out.print("µî·ÏµÇ¾ú½À´Ï´Ù.");
+      out.print("ï¿½ï¿½ÏµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
       response.sendRedirect("template.jsp");
-   }//µî·Ï
+   }//ï¿½ï¿½ï¿½
    
    
-   else if(command.equals("/idcheck.manager")) {//¾ÆÀÌµð Áßº¹¿©ºÎ
+   else if(command.equals("/idcheck.manager")) {//ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½
       String id = request.getParameter("id");
       mdto.setId(id);
       boolean idcheck = mdao.managerIdCheck(mdto);
       if(idcheck==true) {
-         out.print("¾ÆÀÌµð°¡ ÀÌ¹Ì »ç¿ëÁßÀÔ´Ï´Ù.");
+         out.print("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
       }else {
-         out.print("¾ÆÀÌµð°¡ »ç¿ë °¡´ÉÇÕ´Ï´Ù.");
+         out.print("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
       }
-      out.print("<input type='button' value='Á¾·á' onClick='self.close()'>");
-   }//¾ÆÀÌµð Áßº¹¿©ºÎ
+      out.print("<input type='button' value='ï¿½ï¿½ï¿½ï¿½' onClick='self.close()'>");
+   }//ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½
    
    
-   else if(command.equals("/idSearch.manager")) {//¾ÆÀÌµðÃ£±â
+   else if(command.equals("/idSearch.manager")) {//ï¿½ï¿½ï¿½Ìµï¿½Ã£ï¿½ï¿½
       String name = request.getParameter("name");
       String part = request.getParameter("part");
       mdto.setName(name);
       mdto.setPart(part);
       String id = mdao.managerIdSearch(mdto);
       if(id==null) {
-         out.print("ÀÌ¸§ÀÌ³ª ºÎ¼­°¡ Àß¸øµÇ¾ú½À´Ï´Ù.");
+         out.print("ï¿½Ì¸ï¿½ï¿½Ì³ï¿½ ï¿½Î¼ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
       }else {
-         out.print("Ã£À¸½Ã´Â ¾ÆÀÌµð´Â="+id+"ÀÔ´Ï´Ù.");
+         out.print("Ã£ï¿½ï¿½ï¿½Ã´ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½="+id+"ï¿½Ô´Ï´ï¿½.");
       }
-      out.print("<input type='button' value='Á¾·á' onClick='self.close()'>");
-   }//¾ÆÀÌµðÃ£±â
+      out.print("<input type='button' value='ï¿½ï¿½ï¿½ï¿½' onClick='self.close()'>");
+   }//ï¿½ï¿½ï¿½Ìµï¿½Ã£ï¿½ï¿½
    
    
-   else if(command.equals("/pwSearch.manager")) {//ºñ¹Ð¹øÈ£ Ã£±â
+   else if(command.equals("/pwSearch.manager")) {//ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½
       String id = request.getParameter("id");
       String name = request.getParameter("name");
       String part = request.getParameter("part");
@@ -88,15 +88,15 @@ public class ManagerFrontControllServlet extends HttpServlet {
       mdto.setPart(part);
       String pw = mdao.managerPwSearch(mdto);
       if(pw==null) {
-         out.print("id³ª ÀÌ¸§ÀÌ³ª ºÎ¼­ÀÌ Àß¸øµÇ¾ú½À´Ï´Ù.");
+         out.print("idï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ì³ï¿½ ï¿½Î¼ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
       }else {
-         out.print("Ã£À¸½Ã´Â ºñ¹Ð¹øÈ£´Â"+pw+"ÀÔ´Ï´Ù.");
+         out.print("Ã£ï¿½ï¿½ï¿½Ã´ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½"+pw+"ï¿½Ô´Ï´ï¿½.");
       }
-      out.print("<input type='button' value='Á¾·á' onClick='self.close()'>");
-   }//ºñ¹Ð¹øÈ£ Ã£±â
+      out.print("<input type='button' value='ï¿½ï¿½ï¿½ï¿½' onClick='self.close()'>");
+   }//ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½
    
    
-   else if(command.equals("/loginform.manager")) {//·Î±×ÀÎ
+   else if(command.equals("/loginform.manager")) {//ï¿½Î±ï¿½ï¿½ï¿½
       HttpSession session = request.getSession(false);
       String id = request.getParameter("id");
       String pw = request.getParameter("pw");
@@ -110,17 +110,17 @@ public class ManagerFrontControllServlet extends HttpServlet {
       }else {
          response.sendRedirect("template.jsp?page=managerLogin");
       }
-   }//·Î±×ÀÎ
+   }//ï¿½Î±ï¿½ï¿½ï¿½
    
    
-   else if(command.equals("/logout.manager")) {//·Î±×¾Æ¿ô
+   else if(command.equals("/logout.manager")) {//ï¿½Î±×¾Æ¿ï¿½
       HttpSession session = request.getSession(false);
       session.removeAttribute("id");
       response.sendRedirect("template.jsp");
-   }//·Î±×¾Æ¿ô
+   }//ï¿½Î±×¾Æ¿ï¿½
    
    
-   else if(command.equals("/updateView.manager")) {//¼öÁ¤view
+   else if(command.equals("/updateView.manager")) {//ï¿½ï¿½ï¿½ï¿½view
       String id = request.getParameter("id");
       String pw = request.getParameter("pw");
       String pwsh = request.getParameter("pwsh");
@@ -134,10 +134,9 @@ public class ManagerFrontControllServlet extends HttpServlet {
       mdto.setName(name);
       mdto.setPart(part);
       mdao.managerUpdate(mdto);
-      out.print("Á¤º¸°¡ ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
       response.sendRedirect("template.jsp?page=managerLogin");
-   }//¼öÁ¤view
-   else if(command.equals("/update.manager")) {//¼öÁ¤
+   }//ï¿½ï¿½ï¿½ï¿½view
+   else if(command.equals("/update.manager")) {//ï¿½ï¿½ï¿½ï¿½
       HttpSession session = request.getSession(false);
       String id = (String) session.getAttribute("id");
       mdto.setId(id);
@@ -146,14 +145,14 @@ public class ManagerFrontControllServlet extends HttpServlet {
       RequestDispatcher dis = request.getRequestDispatcher("template.jsp?page=managerUpdate2");
       request.setAttribute("mdto", mdto);
       dis.forward(request, response);
-   }//¼öÁ¤
-   else if(command.equals("/delete.manager")) {//»èÁ¦
+   }
+   else if(command.equals("/delete.manager")) {//ï¿½ï¿½ï¿½ï¿½
       HttpSession session = request.getSession(false);
       String id = (String) session.getAttribute("id");
       mdto.setId(id);
       mdao.managerLeave(mdto);
       session.removeAttribute("id");
       response.sendRedirect("template.jsp");
-   }//»èÁ¦
+   }//ï¿½ï¿½ï¿½ï¿½
   }
 }

@@ -98,8 +98,32 @@ public class MovieDAO {
       return movieList;
    }
    
-   public void movieUpdate() {
-      sql = "update ";
+   public void movieUpdate(MovieDTO mdto) {
+      try {
+		sql = "update team4.movie set movie_title = ?, movie_rank = ?, movie_grade = ?, movie_director = ?, movie_actor=?, movie_kind = ? where  movie_no = ?";
+		  pstmt = conn.prepareStatement(sql);
+		  pstmt.setString(1, mdto.getTitle());
+		  pstmt.setString(2, mdto.getRank());
+		  pstmt.setString(3, mdto.getGrade());
+		  pstmt.setString(4, mdto.getDirector());
+		  pstmt.setString(5, mdto.getActor());
+		  pstmt.setString(6, mdto.getKind());
+		  pstmt.setInt(7, mdto.getNo());
+		  pstmt.executeUpdate();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
    }
-   
+   public void movieDelete(MovieDTO mdto) {
+	   try {
+		sql = "delete from team4.movie where movie_no = ? ";
+		   pstmt=conn.prepareStatement(sql);
+		   pstmt.setInt(1, mdto.getNo() );
+		   pstmt.executeUpdate();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+   }
 }
