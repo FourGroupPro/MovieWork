@@ -93,9 +93,13 @@ public class MovieFrontControll extends HttpServlet {
 			}
 
 			else if (request.getParameter("name").equals("screening")) {
+				System.out.println(movieList);
+				System.out.println(movieList.size());
+				System.out.println(movieList.size()/3);
 				RequestDispatcher dispatcher = request.getRequestDispatcher("usertemplate.jsp?page=movie_Screening");
 				request.setAttribute("movieList", movieList);
 				dispatcher.forward(request, response);
+				
 			}
 		} // �Ŵ��� ��Ʈ�� ���� ��
 

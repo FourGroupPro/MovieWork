@@ -75,7 +75,7 @@ public class MovieDAO {
    
    public ArrayList<MovieDTO> movieList(MovieDTO mdto) {
       try {
-         sql="select * from Movie";
+         sql="select * from Movie order by movie_no";
          pstmt = conn.prepareStatement(sql);
          rs = pstmt.executeQuery();
          movieList = new ArrayList<MovieDTO>();

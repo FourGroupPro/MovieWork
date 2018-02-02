@@ -1,117 +1,135 @@
 <%@page import="kr.ac.daegu.MovieDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%ArrayList<MovieDTO> movieList = (ArrayList)request.getAttribute("movieList");
-    MovieDTO mdto = new MovieDTO();%>
+	pageEncoding="UTF-8"%>
+<%
+	MovieDTO mdto = new MovieDTO();
+	ArrayList<MovieDTO> movieList = (ArrayList) request.getAttribute("movieList");
+	int i = movieList.size() / 3;
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <style type="text/css">
+body {
+	background-color: #F0F8FF;
+}
 
-	body {
-		background-color: #F0F8FF;
-	}
-	
-	h1 {
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    font-variant: small-caps;
-    position:relative;
-	margin:auto;
-	margin-top: auto;
-	margin-right: auto;
-	margin-left: auto;
+h1 {
 	text-align: center;
-	}
-	
-	h3 {
-    text-align: center;
-    font-variant: small-caps;
-    position:relative;
-    top:20px;
-	margin:auto;
-	margin-top: auto;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
-	}
-	
-	table{
+	font-family: "Lato", sans-serif;
+	font-variant: small-caps;
 	position: relative;
-	top:30px;
-	border-spacing: 20px;
-	margin:auto;
+	margin: auto;
 	margin-top: auto;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
-	}
-	
-	img{
-		width: 200px;
-		height: 300px;
-		cursor: pointer;
-	}
+}
+
+h3 {
+	text-align: center;
+	font-variant: small-caps;
+	position: relative;
+	top: 20px;
+	margin: auto;
+	margin-top: auto;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+table {
+	position: relative;
+	top: 30px;
+	border-spacing: 20px;
+	margin: auto;
+	margin-top: auto;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+img {
+	width: 200px;
+	height: 300px;
+	cursor: pointer;
+}
 </style>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<h3>현재 상영작 </h3>
+	<form action="" method="post">
+		<div>
+			<%
+				if (i == 0) {
+			%>
+			<table id="reserve">
+				<tr>
+					<%
+						for (int j = 0; j < 3; j++) {
+								mdto = movieList.get(j);
+					%>
 
-	<table>
-		<tr>
-			<th>No.1</th>
-			<th>No.2</th>
-			<th>No.3</th>			
-		</tr>
-		<tr>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/코코.jpg" onclick="popup_win1()"></a></td>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/신과함게.jpg" onclick="popup_win2()"></a></td>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/쥬만지.jpg" onclick="popup_win3()"></a></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
+					<td><img src="images/<%=mdto.getPicture()%>"><br> <input
+						type="radio" name="kind" value="1001" class="option-input radio"><%=mdto.getTitle()%>
+					</td>
 
-	<table>
-		<tr>
-			<th >No.4</th>
-			<th >No.5</th>
-			<th >No.6</th>			
-		</tr>
-		<tr>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/강철비.jpg" onclick="popup_win4()"></a></td>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/어쌔신더비기닝.jpg" onclick="popup_win5()"></a></td>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/위대한 쇼맨.jpg" onclick="popup_win6()"></a></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<table>
-		<tr>
-			<th>No.7</th>
-			<th>No.8</th>
-			<th>No.9</th>			
-		</tr>
-		<tr>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/dun.jpg" onclick="popup_win7()"></a></td>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/홈커밍.jpg" onclick="popup_win8()"></a></td>
-			<td><a href="Usertemplate.jsp?page=movie_Screening"><img src="images/더울프오브더월스트릿.jpg" onclick="popup_win9()"></a></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
+					<%
+						}
+					%>
+				</tr>
+			</table>
+			<%
+				}
+				if (i > 0) {
+			%>
+			<table id="reserve">
+				<tr>
+					<%
+						for (int j = 0; j < 3; j++) {
+								mdto = movieList.get(j);
+					%>
+
+					<td><img src="images/<%=mdto.getPicture()%>"><br> <input
+						type="radio" name="kind" value="1001" class="option-input radio"><%=mdto.getTitle()%>
+					</td>
+					<%
+						}
+					%>
+				</tr>
+			</table>
+			<%
+				for (i = 1; i <= movieList.size() / 3; i++) {
+			%>
+			<table>
+				<tr>
+					<%
+						for (int j = 0; j < 3; j++) {
+									mdto = movieList.get(i * 3 + j);
+					%>
+
+					<td><img src="images/<%=mdto.getPicture()%>"><br> <input
+						type="radio" name="kind" value="1004" class="option-input radio"><%=mdto.getTitle()%>
+					</td>
+
+
+
+					<%
+						}
+					%>
+				</tr>
+			</table>
+			<%
+				}
+				}
+			%>
+
+		</div>
+	</form>
+
+
 </body>
 </html>

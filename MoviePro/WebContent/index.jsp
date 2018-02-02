@@ -21,6 +21,7 @@ h2 {
   line-height: 1; 
   margin-left: 40%;
   margin-top: 15%;
+  
 }
 
 span {

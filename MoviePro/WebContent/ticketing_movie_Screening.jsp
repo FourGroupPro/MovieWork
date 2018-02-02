@@ -1,5 +1,10 @@
+<%@page import="kr.ac.daegu.MovieDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%ArrayList<MovieDTO>movieList = (ArrayList)request.getAttribute("movieList");
+    MovieDTO mdto = new MovieDTO();
+    int i = movieList.size()/3;%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,77 +15,43 @@
 <body>
 	<form action="" method="post">
 	<div>
-	<table id="reserve">
+	
+	<%
+	if(i==0){%>
+			<table id="reserve">
+				<tr>
+		<% for(int j=0;j<3;i++){
+		mdto = movieList.get(j); %>
+			
+		<td>
+		<img src="<%=mdto.getPicture()%>"><br>
+		<input type="radio" name="kind" value="1001" class="option-input radio"><%=mdto.getTitle() %>
+		</td>
+	</tr>
+</table>
+<% 
+	}
+	}
+	else if(i>0){
+		for(i=1;i<movieList.size()/3;i++){%>
+		<table>
 		<tr>
-			<th>No.1</th>
-			<th>No.2</th>
-			<th>No.3</th>			
-		</tr>
-		<tr>
-			<td>
-			<img src="images/코코.jpg"><br>
-			<input type="radio" name="kind" value="1001" class="option-input radio">코코
-			</td>
+			<% for(int j = 0; j<3;j++){
+			mdto = movieList.get(i*3+j);%>
 			
 			<td>
-			<img src="images/신과함게.jpg"><br>
-			<input type="radio" name="kind" value="1002" class="option-input radio">신과함께
+			<img src="<%=mdto.getPicture()%>"><br>
+			<input type="radio" name="kind" value="1004" class="option-input radio"><%=mdto.getTitle() %>
 			</td>
 			
-			<td>
-			<img src="images/쥬만지.jpg" ><br>
-			<input type="radio" name="kind" value="1003" class="option-input radio">쥬만지
-			</td>
-		</tr>
-	</table>
+			
 
-	<table>
-		<tr>
-			<th >No.4</th>
-			<th >No.5</th>
-			<th >No.6</th>			
-		</tr>
-		<tr>
-			<td>
-			<img src="images/강철비.jpg"><br>
-			<input type="radio" name="kind" value="1004" class="option-input radio">강철비
-			</td>
-			
-			<td>
-			<img src="images/어쌔신더비기닝.jpg"><br>
-			<input type="radio" name="kind" value="1005" class="option-input radio">어쌔신더비기닝
-			</td>
-			
-			<td>
-			<img src="images/위대한 쇼맨.jpg"><br>
-			<input type="radio" name="kind" value="1006" class="option-input radio">위대한쇼맨
-			</td>
-		</tr>
-	</table>
-	<table> 
-		<tr>
-			<th>No.7</th>
-			<th>No.8</th>
-			<th>No.9</th>			
-		</tr>
-		<tr>
-			
-			<td>
-			<img src="images/dun.jpg"><br>
-			<input type="radio" name="kind" value="1007" class="option-input radio">덩케르크
-			</td>
-			<td>
-			<img src="images/홈커밍.jpg"><br>
-			<input type="radio" name="kind" value="1008" class="option-input radio">스파이더맨 홈커밍
-			</td>
-			<td>
-			<img src="images/더울프오브더월스트릿.jpg"><br>
-			<input type="radio" name="kind" value="1009" class="option-input radio">더울프오브더월스트릿
-			</td>
-		</tr>
-		
-		
-	</table>
+		<% }%>
+			</tr>
+			</table>	
+		<% }
+	}%>
+
 	</div>
 	</form>
 </body>
