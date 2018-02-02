@@ -14,6 +14,9 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- =================================배너이미지============================= -->
+
+  <!-- =================================배너이미지=END============================ -->
 <style>
 * {
     box-sizing: border-box;
@@ -60,13 +63,21 @@ body {
     padding-left: 20px;
 }
 
-#manager{}
+.top{
+	margin-left: 200px;
+	float: left;
+	
+	}
+#slider{margin-left: 13%;}
+/* =======================배너이미지 css================================ */
+
+/* =======================배너이미지 css END================================ */
 </style>
 </head>
 <body>
-
+<cantainer>
+<nav>
 <div class="sidenav">
-
 <c:choose>
 <c:when test="${sessionScope.id == null }">
 	<div id="managerLog">
@@ -88,12 +99,21 @@ body {
   <a href="usertemplate.jsp?page=userboard">영화후기</a>
   <a href="#">고객센터</a>
 </div>
+</nav>
+<content>
+<div id="slider">		
+	<jsp:include page="slide.jsp" flush="true"/>
+</div>
+<div>
  <div class="content">
   <div id="movie">
 	 <jsp:include page='${pagefile}.jsp' />
   </div>
-  
 </div> 
+</div>
+</content>
+</cantainer>
+
 
 </body>
 </html>

@@ -40,7 +40,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>I know movie</h1>
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">영화 선택</a></li><!-- 영화종류 // 날 짜 // -->

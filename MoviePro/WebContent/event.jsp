@@ -85,7 +85,6 @@ function popup_win8() {
 <title>Insert title here</title>
 </head>
 <body>
-<h1>I know movie</h1>
 <h3>이벤트</h3>
 
 	<table>

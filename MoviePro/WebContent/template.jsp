@@ -60,13 +60,11 @@ body {
     padding-left: 20px;
 }
 
-#manager{}
 </style>
 </head>
 <body>
 
 <div class="sidenav">
-
 <c:choose>
 <c:when test="${sessionScope.id == null }">
 	<div id="managerLog">
@@ -91,7 +89,6 @@ body {
 
 <div class="content">
   <div id="movie">
-  
 	 <jsp:include page='${pagefile}.jsp' />
   </div>
   
