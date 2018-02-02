@@ -106,7 +106,6 @@ div#regist3{
 
 </style>
 <body>
-    <h1>I know movie</h1>
 <!-- Content -->
       <!-- ==============================영화 메인===================== -->
       <div id="movie2">

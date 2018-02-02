@@ -59,7 +59,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>I know movie</h1>
 <h3>현재 상영작 </h3>
 
 	<table>
