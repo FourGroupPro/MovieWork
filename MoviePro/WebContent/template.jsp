@@ -85,6 +85,7 @@ body {
   </div>
   <a href="mainList.ta">영화관 수익 시뮬</a>
   <a href="movieList.mo?name=manager">Main제어 툴</a>
+  <a href = "">상영작 업로드</a>
 </div>
 
 <div class="content">
