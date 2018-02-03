@@ -9,7 +9,7 @@
 <style type="text/css">
 	body {
   background: #000;
-  padding: 2rem;
+  padding: 2rem;q
 }
 
 h2 {
@@ -24,7 +24,7 @@ h2 {
 }
 
 span {
-  display: block;
+  display: block; 	
 }
 
 span:not(.light) {
