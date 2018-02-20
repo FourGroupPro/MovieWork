@@ -1,142 +1,144 @@
 package kr.co.daegu.ticketing;
 
 public class TicketingDTO {
-	private int nal;
-	private String kind;
-	private int seatnumber;
+	private String nal;
+	private String mname;
+	private String mtime;
+	private int mticket;
+	private String seatnumber;
 	private int price;
 	private String username;
-	private int no;
-	private int pop;
-	private int col;
-	private int oging;
-	private int dog;
-	private int chiken;
-	private int coffee;
+	private String phone;
+	private String email;
 	private int combo1;
 	private int combo2;
-	private int water1;
+	private String card;
+	
 	public TicketingDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public TicketingDTO(int nal, String kind, int seatnumber, int price, String username, int no, int pop, int col,
-			int oging, int dog, int chiken, int coffee, int combo1, int combo2, int water1) {
+
+	public TicketingDTO(String nal, String mname, String mtime, int mticket, String seatnumber, int price,
+			String username, String phone, String email, int combo1, int combo2, String card) {
 		super();
 		this.nal = nal;
-		this.kind = kind;
+		this.mname = mname;
+		this.mtime = mtime;
+		this.mticket = mticket;
 		this.seatnumber = seatnumber;
 		this.price = price;
 		this.username = username;
-		this.no = no;
-		this.pop = pop;
-		this.col = col;
-		this.oging = oging;
-		this.dog = dog;
-		this.chiken = chiken;
-		this.coffee = coffee;
+		this.phone = phone;
+		this.email = email;
 		this.combo1 = combo1;
 		this.combo2 = combo2;
-		this.water1 = water1;
+		this.card = card;
 	}
-	public int getNal() {
+
+	public String getNal() {
 		return nal;
 	}
-	public void setNal(int nal) {
+
+	public void setNal(String nal) {
 		this.nal = nal;
 	}
-	public String getKind() {
-		return kind;
+
+	public String getMname() {
+		return mname;
 	}
-	public void setKind(String kind) {
-		this.kind = kind;
+
+	public void setMname(String mname) {
+		this.mname = mname;
 	}
-	public int getSeatnumber() {
+
+	public String getMtime() {
+		return mtime;
+	}
+
+	public void setMtime(String mtime) {
+		this.mtime = mtime;
+	}
+
+	public int getMticket() {
+		return mticket;
+	}
+
+	public void setMticket(int mticket) {
+		this.mticket = mticket;
+	}
+
+	public String getSeatnumber() {
 		return seatnumber;
 	}
-	public void setSeatnumber(int seatnumber) {
+
+	public void setSeatnumber(String seatnumber) {
 		this.seatnumber = seatnumber;
 	}
+
 	public int getPrice() {
 		return price;
 	}
+
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public int getNo() {
-		return no;
+
+	public String getPhone() {
+		return phone;
 	}
-	public void setNo(int no) {
-		this.no = no;
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public int getPop() {
-		return pop;
+
+	public String getEmail() {
+		return email;
 	}
-	public void setPop(int pop) {
-		this.pop = pop;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public int getCol() {
-		return col;
-	}
-	public void setCol(int col) {
-		this.col = col;
-	}
-	public int getOging() {
-		return oging;
-	}
-	public void setOging(int oging) {
-		this.oging = oging;
-	}
-	public int getDog() {
-		return dog;
-	}
-	public void setDog(int dog) {
-		this.dog = dog;
-	}
-	public int getChiken() {
-		return chiken;
-	}
-	public void setChiken(int chiken) {
-		this.chiken = chiken;
-	}
-	public int getCoffee() {
-		return coffee;
-	}
-	public void setCoffee(int coffee) {
-		this.coffee = coffee;
-	}
+
 	public int getCombo1() {
 		return combo1;
 	}
+
 	public void setCombo1(int combo1) {
 		this.combo1 = combo1;
 	}
+
 	public int getCombo2() {
 		return combo2;
 	}
+
 	public void setCombo2(int combo2) {
 		this.combo2 = combo2;
 	}
-	public int getWater1() {
-		return water1;
+
+	public String getCard() {
+		return card;
 	}
-	public void setWater1(int water1) {
-		this.water1 = water1;
+
+	public void setCard(String card) {
+		this.card = card;
 	}
+
 	@Override
 	public String toString() {
-		return "TicketingDTO [nal=" + nal + ", kind=" + kind + ", seatnumber=" + seatnumber + ", price=" + price
-				+ ", username=" + username + ", no=" + no + ", pop=" + pop + ", col=" + col + ", oging=" + oging
-				+ ", dog=" + dog + ", chiken=" + chiken + ", coffee=" + coffee + ", combo1=" + combo1 + ", combo2="
-				+ combo2 + ", water1=" + water1 + "]";
+		return "TicketingDTO [nal=" + nal + ", mname=" + mname + ", mtime=" + mtime + ", mticket=" + mticket
+				+ ", seatnumber=" + seatnumber + ", price=" + price + ", username=" + username + ", phone=" + phone
+				+ ", email=" + email + ", combo1=" + combo1 + ", combo2=" + combo2 + ", card=" + card + "]";
 	}
 	
 	
-
+	
 }

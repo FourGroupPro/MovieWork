@@ -4,7 +4,7 @@
 <html>
 <head>
 <style type="text/css">
-.login {
+h3{
  font-size: 50px;
  text-shadow: 0 0 10px #666;
  color: #fff;
@@ -13,10 +13,10 @@
  text-transform: capitalize;
  font-family: "맑은 고딕";
  font-style: italic;
- margin-top:10%;
+ margin-top: 1%;
 }
  
- fieldset{
+ fieldset#loginfield{
  border-width:3px;
  border-color: purple; 
  border-right-color:purple;
@@ -53,9 +53,9 @@ input[type="button"] {
 <title>로그인 폼</title>
 </head>
 <body>
-<h3 class="login">login</h3>
+<h3>login</h3>
 <form action="loginform.manager" method="post">
-<fieldset>
+<fieldset id="loginfield">
 <table>
    <tr><td>아이디</td>
    <td><input type="text" name="id" placeholder="아이디" required="required"></td>

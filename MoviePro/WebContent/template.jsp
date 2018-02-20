@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
  	 <c:set var="pagefile" value="${param.page}"/>
    	 <c:choose>
@@ -7,93 +6,93 @@
   		<c:set var="pagefile" value="managerLogin"/>
   	  </c:when>
      </c:choose>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-    box-sizing: border-box;
-}
-
-
-body {
-    margin: 0;
-}
-
-
-/* Style the side navigation */
-.sidenav {	
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;    
-}
-
-
-/* Side navigation links */
-.sidenav a {
-    color: white;
-    padding: 16px;
-    
-    text-decoration: none;
-    display: block;
-    
-}
-
-/* Change color on hover */
-.sidenav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Style the content */
-.content {
-    margin-left: 200px;
-    padding-left: 20px;
-}
-
-</style>
-</head>
-<body>
-
-<div class="sidenav">
-<c:choose>
-<c:when test="${sessionScope.id == null }">
-	<div id="managerLog">
-  	<a href="template.jsp?page=managerLogin">Login</a>
-  </div>
-  </c:when>
-  <c:otherwise>
-  <div id="managerLog">
-    <center><h4 style="color: white; font-size: 15px;">${sessionScope.id}님 환영합니다.</h4></center>
-  	<a href="logout.manager">LogOut</a><a href="update.manager">매니저 정보수정</a>
-  </div>
-</c:otherwise>  
-  </c:choose>
-  <br>
-  <a href="movieList.mo?name=user">User Home</a>
-  <div id="manager">
-  	<a href="template.jsp?page=Manager_Main">일매출액 분석</a>
-  </div>
-  <a href="mainList.ta">영화관 수익 시뮬</a>
-  <a href="movieList.mo?name=manager">Main제어 툴</a>
-  <a href = "">상영작 업로드</a>
-</div>
-
-<div class="content">
-  <div id="movie">
-	 <jsp:include page='${pagefile}.jsp' />
-  </div>
+  <meta charset="UTF-8">
+  <title>Awesome Bootstrap 3 Sidebar Navigation</title>
   
-</div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/leftstyle.css">
+</head>
+
+<body>
+		
+     	 <div id="wrapper" style="background-color: white;">
+      	<jsp:include page="slide.jsp"/>
+        <div class="overlay"></div>
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+            <c:choose>
+				<c:when test="${sessionScope.id == null }">
+                <li class="sidebar-brand">
+                    <a href="template.jsp?page=managerLogin">Login</a>
+                </li>
+                 </c:when>
+ 				 <c:otherwise>
+ 				  <li>
+                    <h4 style="color: white; font-size: 15px;">${sessionScope.id}님 환영합니다.</h4></center>
+  					<a href="logout.manager">LogOut</a><a href="update.manager">매니저 정보수정</a>
+                </li>
+                </c:otherwise>  
+                </c:choose>
+                
+                <li>
+                   <a href="movieList.mo?name=user">User Home</a>
+                </li>
+                <li>
+                    <a href="template.jsp?page=Manager_Main">일매출액 분석</a>
+                </li>
+                <li>
+                    <a href="mainList.ta">영화관 수익 시뮬</a>
+                </li>
+                <li>
+                    <a href="movieList.mo?name=manager">Main제어 툴</a>
+                </li>
+                <li>
+                    <a href = "">상영작 업로드</a>
+                </li>
+            </ul>
+        </nav>
+
+		<div class="content" style="background-color: white;">
+			<div id="movie">
+				<jsp:include page='${pagefile}.jsp' />
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div>
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
 
 </body>
+
 </html>

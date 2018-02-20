@@ -5,7 +5,6 @@
 <head>
   <meta charset="utf-8">
 <title>http://www.blueb.co.kr</title>
-
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -55,7 +54,7 @@
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Hello Movie</h1>
-					<p>돈 많이쓰기</p>
+					<p>행복한 관람</p>
 				</div>
 			</div>
 		</div>
