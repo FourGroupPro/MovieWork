@@ -10,7 +10,6 @@ body { font-size : 15pt;
 #title {font-size: 30pt;
       font-family:'Georgia', serif; 
       font-style:italic}
-
 table.type08 {
     border-collapse: collapse;
     text-align: left;
@@ -28,7 +27,6 @@ table.type08 thead th {
     background: #dcdcd1;
 }
 table.type08 tbody th {
-    width: 150px;
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
@@ -37,20 +35,23 @@ table.type08 tbody th {
     background: #ececec;
 }
 table.type08 td {
-    width: 350px;
     padding: 10px;
     vertical-align: top;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+}
+
+#re{
+color: black;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<div id="board1">
 
-<h1 id="title"> <input type="image" src="images/movie2.png" width="50px">MOVIE REVIEW</h1> 
+
+<h1 id="title" style="color: black;"> <input type="image" src="images/movie2.png" width="50px">MOVIE REVIEW</h1> 
 <form action="registerStudent" method="post">
 <table class="type08">
     <thead>
@@ -95,12 +96,11 @@ table.type08 td {
 </table>
 </form>
 
-<a href="usertemplate.jsp?page=userboardwrite">리뷰작성</a>
-<a href="boardList.boa">목록으로</a>
+<a id="re" href="usertemplate.jsp?page=userboardwrite">리뷰작성</a>
+<a id="re" href="boardList.boa">목록으로</a>
 <form action="boardSearch.boa">
 <input type="text" name="title" required="required" placeholder="제목입력">
 <input type="submit" value="찾기">
 </form>
-</div>
 </body>
 </html>

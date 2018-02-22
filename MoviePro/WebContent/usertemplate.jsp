@@ -58,6 +58,9 @@
                 <li>
                     <a href="#">고객센터</a>
                 </li>
+                <li>
+                    <a href="usertemplate.jsp?page=map">오시는 길</a>
+                </li>
             </ul>
         </nav>
 			

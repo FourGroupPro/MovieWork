@@ -8,21 +8,23 @@ body { font-size : 15pt;
 <<<<<<< HEAD
       font-weight: bold}
 div#write1{
-   position: absolute;
-   top:200px; left:300px;
-}
+  margin-left: 30%;
+} 
 ul{list-style: none;}
 #title {font-size: 30pt;
       font-family:'Georgia', serif; 
-      font-style:italic}
+      font-style:italic
+      }
+
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <div id="write1">
-<form action="boardWrite.boa" method="post">
+
 <!-- <input type="hidden" name="icon" value="du2.jpg"> -->
+<form action="boardWrite.boa" method="post">
 <fieldset>
    <legend id="title"><input type="image" src="images/movie2.png" width="50px">REVIEW</legend>
    <ul>
@@ -49,6 +51,7 @@ ul{list-style: none;}
       <br>
       <li>
          <label for="내용">내용</label>
+         <br>
          <textarea rows="12" cols="80" name="content" placeholder="내용을 입력하세요" required="required"></textarea>
       </li>
       <li>
@@ -59,8 +62,7 @@ ul{list-style: none;}
       
    </ul>
 </fieldset>
-
-</form>
+  </form>
 </div>
 </body>
 </html>
