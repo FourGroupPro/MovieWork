@@ -2,11 +2,11 @@
   <Resource name="jdbc/fourgroup" 
    auth="Container"
    type="javax.sql.DataSource" 
-   username="team4" 
-   password="1234"
+   username="fourgroup" 
+   password="tkdydwk1!"
    driverClassName="com.mysql.jdbc.Driver"
    factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-   url="jdbc:mysql://203.244.141.148:3306/fourgroup"
+   url="jdbc:mysql://localhost/fourgroup"
    maxActive="500" 
    maxIdle="100"/>  
  </Context>
