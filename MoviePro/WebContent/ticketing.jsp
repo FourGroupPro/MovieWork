@@ -64,6 +64,7 @@
 	width: 85%;
 	height: 500px;
 	float: right;
+	background-color: white;
 	}
 	#mtime{
 	text-align:center;
@@ -75,6 +76,7 @@
 	border-right-style: dotted;
 	border-right-color: gray;
 	}
+
 	/* ============mtime css 끝=============== */
 	/* ============seat css 시작=============== */
 	th{
@@ -101,6 +103,7 @@
 </style>
 </head>
 <body>
+<div id="1" style="background-color: #D0A9F5;">
 		<fieldset class="ticketAll">
 			<legend>영화 예매</legend>
 			<form action="mFrist" method="post">
@@ -150,7 +153,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<table class="mRight">
+			<table class="mRight" >
 				<thead>
 					<tr>
 						<th scope="col">Time1 (조조할인)</th>
@@ -217,10 +220,13 @@
 			</form>
 			 <button onclick="fnMove('1')">좌석선택으로 이동</button>
 			</fieldset>
+	<br><br><br>
+</div>
 <!-- ==============================END영화선택============== -->
 <br><br><br><br><br><br><br>
 <!-- ==============================좌석선택============== -->
 <div id="div1"></div>
+<div id="2" style="background-color: #58FAF4;">
 <fieldset class="seatSelect">
 	<legend>좌석선택</legend>
 	<form action="">
@@ -233,7 +239,7 @@
         <option value="5">5명</option>
     </select>
 	<div id="screen" style="background-color: gray; width: 50%; height: 30px; border-radius: 15px; text-align: center; margin: 0 auto; margin-top: 10px; margin-bottom: 20px; padding-top: 10px; color: white;">SCREEN</div>
-<table class="seat" style="height: 500px;">
+<table class="seat" style="height: 500px; background-color: white;">
 	<tbody>
 <tr>
 	<td><label><input type="checkbox" name="seatnumber" value="A-1"/>A-1</label></td>
@@ -323,6 +329,8 @@
 	</form>
     <button onclick="fnMove('2')">매점으로 이동</button>
 	</fieldset>
+	<br><br><br>
+</div>
 <!-- ==============================END좌석선택============== -->
 <br><br><br><br><br><br><br>
 

@@ -8,7 +8,8 @@ body { font-size : 15pt;
 <<<<<<< HEAD
       font-weight: bold}
 div#write1{
-  margin-left: 30%;
+  width:65%;
+  margin: 0 auto;
 } 
 ul{list-style: none;}
 #title {font-size: 30pt;

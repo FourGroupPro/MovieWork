@@ -6,16 +6,18 @@
 <head>
 <style type="text/css">
 body { font-size : 15pt;
-      font-weight: bold}
+      font-weight: bold
+      }
 #title {font-size: 30pt;
       font-family:'Georgia', serif; 
-      font-style:italic}
+      font-style:italic
+      }
 table.type08 {
-    border-collapse: collapse;
-    text-align: left;
+	width:90%;
+	margin:0 auto;
+	border-collapse: collapse;
     line-height: 1.5;
     border-left: 1px solid #ccc;
-    margin: 20px 10px;
 }
 
 table.type08 thead th {
@@ -27,6 +29,8 @@ table.type08 thead th {
     background: #dcdcd1;
 }
 table.type08 tbody th {
+	text-align: center;
+	width:15%;
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
@@ -34,6 +38,7 @@ table.type08 tbody th {
     border-bottom: 1px solid #ccc;
     background: #ececec;
 }
+
 table.type08 td {
     padding: 10px;
     vertical-align: top;
@@ -43,18 +48,25 @@ table.type08 td {
 
 #re{
 color: black;
+margin: 0 auto;
+text-decoration: none;
 }
+#but{
+	margin-left: 5%;
+}
+
+
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-
-
-<h1 id="title" style="color: black;"> <input type="image" src="images/movie2.png" width="50px">MOVIE REVIEW</h1> 
+<div>
+<h1 id="title" style="color: black; margin-left: 8%;"> <input type="image" src="images/movie2.png" width="50px">MOVIE REVIEW</h1> 
+<fieldset style="border: 3px solid black; border-radius: 15px; width: 85%; margin: 0 auto;">
+<div>
 <form action="registerStudent" method="post">
 <table class="type08">
-    <thead>
     <tr>
         <th scope="cols">번호</th>
         <th scope="cols">영화</th>
@@ -63,7 +75,6 @@ color: black;
         <th scope="cols">작성일</th>
         <th scope="cols">조회수</th>
     </tr>
-    </thead>
     <c:forEach var="userboard" items="${boardList}">
   
     <tbody>
@@ -95,12 +106,17 @@ color: black;
 </c:forEach>
 </table>
 </form>
-
+<div id="but">
 <a id="re" href="usertemplate.jsp?page=userboardwrite">리뷰작성</a>
 <a id="re" href="boardList.boa">목록으로</a>
 <form action="boardSearch.boa">
 <input type="text" name="title" required="required" placeholder="제목입력">
 <input type="submit" value="찾기">
 </form>
+</div>
+</div>
+
+</fieldset>
+</div>
 </body>
 </html>

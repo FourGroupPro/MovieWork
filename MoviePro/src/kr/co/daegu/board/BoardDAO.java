@@ -11,6 +11,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import kr.ac.daegu.ConstVal;
+
 public class BoardDAO {
    public DataSource dataFactory;
    private Connection conn;
@@ -25,7 +27,7 @@ public class BoardDAO {
          try {
             Context ctx = new InitialContext();
             boardList = new ArrayList<BoardDTO>();
-            dataFactory=(DataSource)ctx.lookup("java:comp/env/jdbc/Oracle11g");
+            dataFactory=(DataSource)ctx.lookup(ConstVal.DB_NAME);
             conn =dataFactory.getConnection();
          } catch (NamingException e) {
             // TODO Auto-generated catch block
