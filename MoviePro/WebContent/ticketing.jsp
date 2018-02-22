@@ -358,7 +358,7 @@
 				</tbody>
 			</table>
 			<!-- <input type="button" value="자리선택하기" onClick="location.href='ticketingSeat/seat/selectSeat.jsp';">	 -->
-		<button type="button" onclick="location.href='ticketingSeat.jsp' ">예약완료</button>
+		<button type="button" onclick="location.href='ticketingSeat.jsp' ">예약확인</button>
 	</form>
 </fieldset>
 	
