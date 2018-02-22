@@ -38,7 +38,9 @@ public class BoardFrontController extends HttpServlet {
        String command = requestURI.substring(contextPath.length());
        if(command.equals("/boardList.boa")) {//게시판전체출력
           boardList=boardDAO.boardList(boardDTO);
-          RequestDispatcher dispatcher=request.getRequestDispatcher("template.jsp?page=board");
+          System.out.println(boardList.get(0).getTitle());
+          System.out.println("usertemplate.jsp?page=userboard");
+          RequestDispatcher dispatcher=request.getRequestDispatcher("usertemplate.jsp?page=userboard");
           request.setAttribute("boardList", boardList);
           dispatcher.forward(request, response);
           /*dispatcher.include(request, response);

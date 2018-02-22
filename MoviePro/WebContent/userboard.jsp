@@ -75,7 +75,7 @@ text-decoration: none;
         <th scope="cols">작성일</th>
         <th scope="cols">조회수</th>
     </tr>
-    <c:forEach var="userboard" items="${boardList}">
+    <c:forEach var="board" items="${boardList}">
   
     <tbody>
     <tr>
