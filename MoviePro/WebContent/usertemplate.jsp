@@ -53,7 +53,7 @@
                    <a href="usertemplate.jsp?page=event">이벤트</a>
                 </li>
                 <li>
-                    <a href="usertemplate.jsp?page=userboard">영화후기</a>
+                    <a href="boardList.boa">영화후기</a>
                 </li>
                 <li>
                     <a href="#">고객센터</a>

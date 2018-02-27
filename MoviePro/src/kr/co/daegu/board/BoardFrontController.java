@@ -110,7 +110,7 @@ public class BoardFrontController extends HttpServlet {
           boardDTO.setNo(Integer.parseInt(no));
           boardDTO=boardDAO.boardContent(boardDTO);
           boardDAO.boardReadCount(boardDTO);
-          RequestDispatcher dis =request.getRequestDispatcher("template.jsp?page=boardContent");
+          RequestDispatcher dis =request.getRequestDispatcher("usertemplate.jsp?page=userboardcontent");
           request.setAttribute("boardDTO", boardDTO);
           dis.forward(request, response);
        }//게시글 내용

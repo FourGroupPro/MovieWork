@@ -9,6 +9,7 @@
       <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=Z2QWUE5I_OtZXiE0i7vH&submodules=geocoder"></script>
   </head>
   <body>
+  
     <div id="map" style="width:100%;height:400px;"></div>
     <script>
       var map = new naver.maps.Map('map');
@@ -38,7 +39,7 @@
           });
           // 마크 클릭시 인포윈도우 오픈
           var infowindow = new naver.maps.InfoWindow({
-              content: '<h4> [신세계 메가박스]</h4><a href="http://pds.joins.com/news/component/htmlphoto_mmdata/201703/10/500ae1b0-4ddc-4c62-8b74-a59e3870628b.jpg"></a>'
+              content: '<h4 style="color: black;"> [A 메가박스 대구신세계(동대구) 대구광역시 동구 · 1544-0070]</h4> <a href="http://pds.joins.com/news/component/htmlphoto_mmdata/201703/10/500ae1b0-4ddc-4c62-8b74-a59e3870628b.jpg"></a>'
           });
       });
       </script>

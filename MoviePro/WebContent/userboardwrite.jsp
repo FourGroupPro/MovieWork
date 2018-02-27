@@ -31,11 +31,11 @@ ul{list-style: none;}
    <ul>
       <li>
          <label for="영화">영화</label>
-      <select name="movietitle">
-         <option value="1">1987</option>
-         <option value="2">신과함께</option>
-         <option value="3">메이즈러너-데스큐어</option>
-         <option value="4">위대한 쇼맨</option>
+      <select name="movie">
+         <option value="1987">1987</option>
+         <option value="신과함께">신과함께</option>
+         <option value="메이즈러너-데스큐어">메이즈러너-데스큐어</option>
+         <option value="위대한쇼맨">위대한 쇼맨</option>
       </select>
       </li>
       <li>

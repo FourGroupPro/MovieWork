@@ -58,10 +58,11 @@ public class BoardDAO {
       while(rs.next()) {
          boardDTO = new BoardDTO();
          boardDTO.setNo(rs.getInt("no"));
-          boardDTO.setTitle(rs.getString("title"));
-          boardDTO.setAuthor(rs.getString("author"));
-          boardDTO.setNal(rs.getString("nal"));
-          boardDTO.setReadcount(rs.getInt("readcount"));
+         boardDTO.setMovie(rs.getString("movie"));
+         boardDTO.setTitle(rs.getString("title"));
+         boardDTO.setAuthor(rs.getString("author"));
+         boardDTO.setNal(rs.getString("nal"));
+         boardDTO.setReadcount(rs.getInt("readcount"));
          boardList.add(boardDTO);
       }
    } catch (SQLException e) {
