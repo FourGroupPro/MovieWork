@@ -29,18 +29,17 @@
             <c:choose>
 				<c:when test="${sessionScope.id == null }">
                 <li class="sidebar-brand">
-                    <a href="template.jsp?page=managerLogin">Login</a>
+                    <a href="template.jsp?page=managerLogin">Login</a><a href="usertemplate.jsp">User Home</a>
                 </li>
+              
                  </c:when>
  				 <c:otherwise>
  				  <li>
                     <h4 style="color: white; font-size: 15px;">${sessionScope.id}님 환영합니다.</h4></center>
   					<a href="logout.manager">LogOut</a><a href="update.manager">매니저 정보수정</a>
                 </li>
-                </c:otherwise>  
-                </c:choose>
                 
-                <li>
+                 <li>
                    <a href="movieList.mo?name=user">User Home</a>
                 </li>
                 <li>
@@ -55,6 +54,11 @@
                 <li>
                     <a href = "">상영작 업로드</a>
                 </li>
+                
+                </c:otherwise>  
+                </c:choose>
+                
+               
             </ul>
         </nav>
 

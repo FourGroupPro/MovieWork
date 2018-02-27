@@ -4,7 +4,7 @@
  	 <c:set var="pagefile" value="${param.page}"/>
    	 <c:choose>
   	  <c:when test="${pagefile==null}">
-  		<c:set var="pagefile" value="fristpage"/>
+  		<c:set var="pagefile" value="movieList.mo?name=user"/>
   	  </c:when>
      </c:choose>
 <!DOCTYPE html>
@@ -35,8 +35,9 @@
  				 <c:otherwise>
  				  <li>
                     <h4 style="color: white; font-size: 15px;">${sessionScope.id}님 환영합니다.</h4></center>
-  					<a href="logout.manager">LogOut</a><a href="update.manager">매니저 정보수정</a>
+  					<a href="logout.manager">LogOut</a><a href="update.manager">매니저 정보수정</a><a href="template.jsp?page=Manager_Main">Manager Home	</a>
                 </li>
+ <li></li>               
                 </c:otherwise>  
                 </c:choose>
                 

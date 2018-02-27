@@ -106,7 +106,7 @@ public class ManagerFrontControllServlet extends HttpServlet {
       if(login==true) {
          session.setAttribute("id",id);
          System.out.println(session.getAttribute("id"));
-         response.sendRedirect("template.jsp");
+         response.sendRedirect("template.jsp?page=Manager_Main");
       }else {
          response.sendRedirect("template.jsp?page=managerLogin");
       }
